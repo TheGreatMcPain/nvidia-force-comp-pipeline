@@ -1,6 +1,6 @@
 # nvidia-force-comp-pipeline
 
-A simple script that auto-enables ForceCompositionPipeline on all monitors at startup.
+A simple script that changes the ForceCompositionPipeline setting on all monitors at startup.
 
 ## The ForceCompositionPipeline mode
 
@@ -27,15 +27,20 @@ It may also increase input lag, although there are conflicting reports on that p
 ## Installation
 
 ```
-git clone https://github.com/Askannz/nvidia-force-comp-pipeline
+git clone https://github.com/TheGreatMcPain/nvidia-force-comp-pipeline
 cd nvidia-force-comp-pipeline/
-sudo cp nvidia-force-comp-pipeline /usr/bin/
-sudo cp nvidia-force-comp-pipeline.desktop /etc/xdg/autostart/
+sudo cp nvidia-force-comp-pipeline /usr/local/bin/
 ```
 
-Arch-based distributions can also use this AUR package : https://aur.archlinux.org/packages/nvidia-force-comp-pipeline/
+## Usage
 
-This should work on any desktop environment that follows the Freedesktop specifications. The script will be automatically launched at session startup.
+./nvidia-force-comp-pipeline -h "Prints help."
+
+./nvidia-force-comp-pipeline -y (or --yes) "Enable ForceCompositionPipeline"
+
+./nvidia-force-comp-pipeline -n (or --no) "Disable ForceCompositionPipeline"
+
+./nvidia-force-comp-pipeline -s (or --status) "Prints 'Yes' if On and 'No' if Off."
 
 ## Known issues
 
